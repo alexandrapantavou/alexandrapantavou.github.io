@@ -32,7 +32,7 @@ $(function () {
       $this.prop("disabled", true); // Disable submit button until AJAX call is complete to prevent duplicate messages
 
       $.ajax({
-        url: "https://websitefunctions.azurewebsites.net/api/contactformemail",
+        url: "https://websitefunctions.azurewebsites.net/api/emailformalexandra",
         type: "POST",
         data: JSON.stringify({
           name: name,
