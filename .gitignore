@@ -5,4 +5,3 @@
 *.suo
 /.vs
 /node_modules
-/vendor

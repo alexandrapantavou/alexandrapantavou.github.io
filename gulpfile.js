@@ -30,9 +30,11 @@ gulp.task('vendor', function(done) {
 
   // Font Awesome 5
   gulp.src([
-      './node_modules/@fortawesome/**/*'
+      './node_modules/@fortawesome/fontawesome-free/*/*.css',
+      './node_modules/@fortawesome/fontawesome-free/*/*.woff',
+      './node_modules/@fortawesome/fontawesome-free/*/*.woff2'
     ])
-    .pipe(gulp.dest('./vendor'))
+      .pipe(gulp.dest('./vendor/fontawesome-free'))
 
   // jQuery
   gulp.src([
@@ -127,7 +129,7 @@ gulp.task('browserSync', function() {
 });
 
 // Dev task
-gulp.task('dev', gulp.series('css', 'js', 'browserSync'), function() {
+gulp.task('dev', gulp.series('css', 'js', 'vendor', 'browserSync'), function() {
   gulp.watch('./scss/*.scss', ['css']);
   gulp.watch('./js/*.js', ['js']);
   gulp.watch('./*.html', browserSync.reload);
