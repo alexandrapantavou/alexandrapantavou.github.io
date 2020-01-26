@@ -1,6 +1,7 @@
 {
     "title": "Website Alexandra Pantavou",
     "name": "website-alexandra-pantavou",
+    "description": "This is the personal website of Alexandra Pantavou",
     "version": "1.0.1",
     "keywords": [
         "css",
@@ -18,11 +19,16 @@
         "type": "git",
         "url": "https://github.com/alexandrapantavou/alexandrapantavou.github.io.git"
     },
+    "scripts": {
+        "lite": "lite-server --port 10001",
+        "start": "npm run lite"
+    },
     "dependencies": {
         "@fortawesome/fontawesome-free": "5.3.1",
         "bootstrap": "^4.4.1",
         "jquery": "^3.4.1",
         "jquery.easing": "^1.4.1",
+        "popper.js": "^1.16.0",
         "simple-line-icons": "^2.4.1"
     },
     "devDependencies": {
@@ -33,6 +39,7 @@
         "gulp-header": "2.0.5",
         "gulp-rename": "1.4.0",
         "gulp-sass": "^4.0.2",
-        "gulp-uglify": "3.0.1"
+        "gulp-uglify": "3.0.1",
+        "lite-server": "^2.5.4"
     }
 }
