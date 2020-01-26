@@ -20,7 +20,7 @@
         "url": "https://github.com/alexandrapantavou/alexandrapantavou.github.io.git"
     },
     "scripts": {
-        "lite": "lite-server --port 10001",
+        "lite": "lite-server",
         "start": "npm run lite"
     },
     "dependencies": {

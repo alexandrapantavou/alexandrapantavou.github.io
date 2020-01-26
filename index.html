@@ -4,11 +4,6 @@
 <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-    <script>
-      function onSubmit(token) {
-        document.getElementById("contactForm").submit();
-      }
-    </script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-142120197-2"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -43,6 +38,8 @@
     <!-- Custom CSS -->
     <link href="css/stylish-portfolio.min.css" rel="stylesheet">
 
+    <!-- Favicon png -->
+    <link rel="shortcut icon" href="favicon.png" />
 </head>
 
   <body id="page-top">
@@ -177,9 +174,14 @@
             </div>
             <br>
             <div id="success"></div>
+						<div class="g-recaptcha"
+							data-sitekey="6LeS2tIUAAAAAHFIoiN83kU15biseZcV-FBgk4Sn"
+							data-callback="onSubmit"
+							data-size="invisible">
+						</div>  
             <div class="form-group">
                 <input type="hidden" id="appid" value="5a15907e-4242-418f-9413-a5228789ccdf">
-                <button type="submit" class="g-recaptcha btn btn-primary" id="sendMessageButton" data-sitekey="6LeS2tIUAAAAAHFIoiN83kU15biseZcV-FBgk4Sn" data-callback='onSubmit'>Send</button>
+                <button type="submit" class="btn btn-primary" id="sendMessageButton">Send</button>
             </div>
           </form>
       </div>
