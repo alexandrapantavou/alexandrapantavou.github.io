@@ -1,6 +1,6 @@
 /*!
  * Start Bootstrap - Website Alexandra Pantavou v1.0.1 (https://alexandrapantavou.com)
- * Copyright 2013-2019 Machiel Visser
+ * Copyright 2013-2020 Machiel Visser
  * Licensed under MIT (https://github.com/BlackrockDigital/website-alexandra-pantavou/blob/master/LICENSE)
  */
 
@@ -85,6 +85,10 @@ h6 {
   font-weight: 800;
 }
 
+#attribution {
+  font-size: 5px;
+}
+
 .masthead {
   min-height: 30rem;
   position: relative;
@@ -93,7 +97,6 @@ h6 {
   height: auto;
   padding-top: 8rem;
   padding-bottom: 8rem;
-  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.1)), to(rgba(255, 255, 255, 0.1))), url("../img/bg-masthead.jpg");
   background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), url("../img/bg-masthead.jpg");
   background-position: center center;
   background-repeat: no-repeat;
@@ -122,7 +125,6 @@ h6 {
   right: 0;
   width: 250px;
   height: 100%;
-  -webkit-transition: all 0.4s ease 0s;
   transition: all 0.4s ease 0s;
   -webkit-transform: translateX(250px);
   transform: translateX(250px);
@@ -179,7 +181,6 @@ h6 {
 #sidebar-wrapper.active {
   right: 250px;
   width: 250px;
-  -webkit-transition: all 0.4s ease 0s;
   transition: all 0.4s ease 0s;
 }
 
@@ -212,13 +213,11 @@ h6 {
   display: block;
   line-height: 7.5rem;
   font-size: 2.25rem;
-  -webkit-box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
   box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
 }
 
 .callout {
   padding: 15rem 0;
-  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.1)), to(rgba(255, 255, 255, 0.1))), url("../img/bg-callout.jpg");
   background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), url("../img/bg-callout.jpg");
   background-position: center center;
   background-repeat: no-repeat;
@@ -241,8 +240,6 @@ h6 {
 }
 
 .portfolio-item .caption {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   height: 100%;
   width: 100%;
@@ -255,17 +252,13 @@ h6 {
 
 .portfolio-item .caption .caption-content {
   color: #fff;
-  margin: auto 2rem 2rem;
+  margin: auto 2rem auto;
+  width: 100%;
 }
 
 .portfolio-item .caption .caption-content h2 {
-  font-size: 0.8rem;
-  text-transform: uppercase;
-}
-
-.portfolio-item .caption .caption-content p {
-  font-weight: 300;
-  font-size: 1.2rem;
+  opacity: 90%;
+  text-align: center;
 }
 
 @media (min-width: 992px) {
@@ -279,11 +272,8 @@ h6 {
     clip-path: inset(0px);
   }
   .portfolio-item .caption .caption-content {
-    -webkit-transition: opacity 0.25s;
     transition: opacity 0.25s;
-    margin-left: 5rem;
-    margin-right: 5rem;
-    margin-bottom: 5rem;
+    margin: auto 5rem auto 5rem;
   }
   .portfolio-item img {
     -webkit-transition: -webkit-clip-path 0.25s ease-out;
@@ -313,9 +303,7 @@ footer.footer .social-link {
   line-height: 4.3rem;
   font-size: 1.5rem;
   background-color: #1D809F;
-  -webkit-transition: background-color 0.15s ease-in-out;
   transition: background-color 0.15s ease-in-out;
-  -webkit-box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
   box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
 }
 
@@ -359,7 +347,6 @@ a:hover, a:focus, a:active {
 }
 
 .btn {
-  -webkit-box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.1);
   box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.1);
   font-weight: 700;
 }
