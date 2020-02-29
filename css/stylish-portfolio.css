@@ -1,9 +1,3 @@
-/*!
- * Start Bootstrap - Website Alexandra Pantavou v1.0.1 (https://alexandrapantavou.com)
- * Copyright 2013-2020 Machiel Visser
- * Licensed under MIT (https://github.com/BlackrockDigital/website-alexandra-pantavou/blob/master/LICENSE)
- */
-
 body,
 html {
   width: 100%;
@@ -104,6 +98,7 @@ h6 {
 }
 
 .masthead h1 {
+  font-family: 'Noa';
   font-size: 4rem;
   margin: 0;
   padding: 0;
@@ -259,6 +254,7 @@ h6 {
 .portfolio-item .caption .caption-content h2 {
   opacity: 90%;
   text-align: center;
+  font-family: 'Noa';
 }
 
 @media (min-width: 992px) {
@@ -269,6 +265,7 @@ h6 {
   .portfolio-item .caption {
     -webkit-transition: -webkit-clip-path 0.25s ease-out, background-color 0.7s;
     -webkit-clip-path: inset(0px);
+    transition: 0.25s ease-out, background-color 0.7s;
     clip-path: inset(0px);
   }
   .portfolio-item .caption .caption-content {
@@ -278,6 +275,7 @@ h6 {
   .portfolio-item img {
     -webkit-transition: -webkit-clip-path 0.25s ease-out;
     -webkit-clip-path: inset(-1px);
+    transition: 0.25s ease-out;
     clip-path: inset(-1px);
   }
   .portfolio-item:hover img {
@@ -361,4 +359,43 @@ a:hover, a:focus, a:active {
 
 .text-secondary {
   color: #ecb807 !important;
+}
+
+@font-face {
+  font-family: 'Bitter';
+  src: url("./fonts/bitter/Regular/Bitter-Regular.eot");
+  src: url("./fonts/bitter/Regular/Bitter-Regular.eot?#iefix") format("embedded-opentype"), url("./fonts/bitter/Regular/Bitter-Regular.woff") format("woff"), url("./fonts/bitter/Regular/Bitter-Regular.ttf") format("truetype"), url("./fonts/bitter/Regular/Bitter-Regular.svg#BitterBold") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Bitter';
+  src: url("./fonts/bitter/Bold/Bitter-Bold.eot");
+  src: url("./fonts/bitter/Bold/Bitter-Bold.eot?#iefix") format("embedded-opentype"), url("./fonts/bitter/Bold/Bitter-Bold.woff") format("woff"), url("./fonts/bitter/Bold/Bitter-Bold.ttf") format("truetype"), url("./fonts/bitter/Bold/Bitter-Bold.svg#BitterBold") format("svg");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Bitter';
+  src: url("./fonts/bitter/BoldItalic/Bitter-BoldItalic.eot");
+  src: url("./fonts/bitter/BoldItalic/Bitter-BoldItalic.eot?#iefix") format("embedded-opentype"), url("./fonts/bitter/BoldItalic/Bitter-BoldItalic.woff") format("woff"), url("./fonts/bitter/BoldItalic/Bitter-BoldItalic.ttf") format("truetype"), url("./fonts/bitter/BoldItalic/Bitter-BoldItalic.svg#BitterBold") format("svg");
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Bitter';
+  src: url("./fonts/bitter/Italic/Bitter-Italic.eot");
+  src: url("./fonts/bitter/Italic/Bitter-Italic.eot?#iefix") format("embedded-opentype"), url("./fonts/bitter/Italic/Bitter-Italic.woff") format("woff"), url("./fonts/bitter/Italic/Bitter-Italic.ttf") format("truetype"), url("./fonts/bitter/Italic/Bitter-Italic.svg#BitterBold") format("svg");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Noa';
+  src: url("./fonts/noa-w01/Regular/Noa LT Std Light.ttf");
+  font-weight: normal;
+  font-style: normal;
 }

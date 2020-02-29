@@ -74,9 +74,9 @@ function modules() {
   .pipe(gulp.dest('./vendor/simple-line-icons/css'))
 
   var bitterFont = gulp.src([
-    './node_modules/bitter-font/fonts/**',
+    './node_modules/bitter-font/fonts/**/*.woff ',
   ])
-  .pipe(gulp.dest('./vendor/bitter/font'))
+  .pipe(gulp.dest('./css/fonts/bitter'))
 
   return merge(bootstrap, fontAwesomeCSS, fontAwesomeWebfonts, jquery, jqueryEasing, simpleLineIconsFonts, simpleLineIconsCss, bitterFont);
 }
@@ -88,14 +88,10 @@ function css() {
     .pipe(plumber())
     .pipe(sass({
       outputStyle: "expanded",
-      includePaths: "./node_modules",
     }))
     .on("error", sass.logError)
     .pipe(autoprefixer({
       cascade: false
-    }))
-    .pipe(header(banner, {
-      pkg: pkg
     }))
     .pipe(gulp.dest("./css"))
     .pipe(rename({
@@ -116,9 +112,6 @@ function js() {
       '!./js/jqBootstrapValidation.js'
     ])
     .pipe(uglify())
-    .pipe(header(banner, {
-      pkg: pkg
-    }))
     .pipe(rename({
       suffix: '.min'
     }))
