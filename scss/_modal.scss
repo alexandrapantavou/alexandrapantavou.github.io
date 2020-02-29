@@ -66,9 +66,9 @@ border-radius: $radius;
                         content: '';
                         width: 2px;
                         position: absolute;
-                        top: .5rem;
-                        bottom: 0rem;
-                        left: 60px;
+                        top: 1.5rem;
+                        bottom: -1.5rem;
+                        left: 50px;
                         z-index: 1;
                         background: #C5C5C5;
                     }
@@ -83,7 +83,7 @@ border-radius: $radius;
 
                         h4 {
                             margin: 0;
-                            padding: 0 0 0 89px;
+                            padding: 0 0 0 79px;
                             @media (min-width: 62em) {
                                 font-size: 2em;
                                 font-weight: 400;
@@ -95,7 +95,7 @@ border-radius: $radius;
                             margin: 0.35rem 0 1.2rem;
                             max-width: 32rem;
                             font-size: 0.9em;
-                            padding: 0 0 0 81px;
+                            padding: 0 0 0 71px;
                             @media (min-width: 62em) {
                                 font-size: 1.1em;
                             }
@@ -107,8 +107,8 @@ border-radius: $radius;
                                 border: 2px solid #C5C5C5;
                                 @include border-radius(50%);
                                 position: absolute;
-                                left: 54px;
-                                top: 3px;
+                                left: 44px;
+                                top: 8px;
                                 z-index: 2;
                             }
                             li {
