@@ -20,14 +20,17 @@
         "url": "https://github.com/alexandrapantavou/alexandrapantavou.github.io.git"
     },
     "scripts": {
-        "lite": "lite-server",
-        "start": "npm run lite"
+        "start": "gulp"
     },
     "dependencies": {
         "@fortawesome/fontawesome-free": "5.3.1",
+        "bitter-font": "0.0.1",
         "bootstrap": "^4.4.1",
+        "del": "^5.1.0",
+        "gulp-plumber": "^1.2.1",
         "jquery": "^3.4.1",
         "jquery.easing": "^1.4.1",
+        "merge-stream": "^2.0.0",
         "popper.js": "^1.16.0",
         "simple-line-icons": "^2.4.1"
     },
@@ -39,7 +42,6 @@
         "gulp-header": "2.0.5",
         "gulp-rename": "1.4.0",
         "gulp-sass": "^4.0.2",
-        "gulp-uglify": "3.0.1",
-        "lite-server": "^2.5.4"
+        "gulp-uglify": "3.0.1"
     }
 }
