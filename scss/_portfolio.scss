@@ -20,6 +20,7 @@
       h2 {
         opacity: 90%;
         text-align: center;
+        font-family: 'Noa';
       }
     }
   }
@@ -29,6 +30,7 @@
     .caption {
       -webkit-transition: -webkit-clip-path 0.25s ease-out, background-color 0.7s;
       -webkit-clip-path: inset(0px);
+      transition: 0.25s ease-out, background-color 0.7s;
       clip-path: inset(0px);
       .caption-content {
         transition: opacity 0.25s;
@@ -38,6 +40,7 @@
     img {
       -webkit-transition: -webkit-clip-path 0.25s ease-out;
       -webkit-clip-path: inset(-1px);
+      transition: 0.25s ease-out;
       clip-path: inset(-1px);
     }
     &:hover {
