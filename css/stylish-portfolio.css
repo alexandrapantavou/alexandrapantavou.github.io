@@ -456,9 +456,15 @@ a:hover, a:focus, a:active {
 
 .modal-content .modal-body .modal-container h1 {
   font-family: 'Noa';
-  font-size: 60px;
+  font-size: 2.5em;
   color: gray;
   margin: 16px;
+}
+
+@media (min-width: 62em) {
+  .modal-content .modal-body .modal-container h1 {
+    font-size: 3em;
+  }
 }
 
 .modal-content .modal-body .modal-container #timeline {
@@ -488,8 +494,8 @@ a:hover, a:focus, a:active {
 
 .modal-content .modal-body .modal-container #timeline div div {
   position: relative;
-  margin-bottom: 1em;
   font-family: 'Bitter';
+  padding-right: 2rem;
 }
 
 .modal-content .modal-body .modal-container #timeline div div h4 {
@@ -506,20 +512,16 @@ a:hover, a:focus, a:active {
 
 .modal-content .modal-body .modal-container #timeline div div ul {
   list-style-type: none;
-  margin: 0.35rem 0 0.5rem;
+  margin: 0.35rem 0 1.2rem;
   max-width: 32rem;
-  font-size: 1em;
+  font-size: 0.9em;
+  padding: 0 0 0 81px;
 }
 
 @media (min-width: 62em) {
   .modal-content .modal-body .modal-container #timeline div div ul {
     font-size: 1.1em;
-    padding: 0 0 0 81px;
   }
-}
-
-.modal-content .modal-body .modal-container #timeline div div ul:last-child {
-  margin-bottom: 0;
 }
 
 .modal-content .modal-body .modal-container #timeline div div ul:first-of-type:after {

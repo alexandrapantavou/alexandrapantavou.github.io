@@ -42,9 +42,13 @@ border-radius: $radius;
     
             h1 {
                 font-family: 'Noa';
-                font-size: 60px;
+                font-size: 2.5em;
                 color: gray;
                 margin: 16px;
+
+                @media (min-width: 62em) {
+                    font-size: 3em;
+                }
             }
     
             #timeline {
@@ -58,70 +62,67 @@ border-radius: $radius;
                     top: 1rem;
                 }
                 div {
-                &:after {
-                    content: '';
-                    width: 2px;
-                    position: absolute;
-                    top: .5rem;
-                    bottom: 0rem;
-                    left: 60px;
-                    z-index: 1;
-                    background: #C5C5C5;
-                }
-                &:last-child:after {
-                    width: 0px;
-                }
-    
-                div {
-                    position: relative;
-                    margin-bottom: 1em;
-                    font-family: 'Bitter';
-                    h4 {
-                    margin: 0;
-                    padding: 0 0 0 89px;
-                    @media (min-width: 62em) {
-                        font-size: 2em;
-                        font-weight: 400;
-                    }
-                    }
-                    ul {
-                    list-style-type: none;
-                    margin: 0.35rem 0 0.5rem;
-                    max-width: 32rem;
-                    font-size: 1em;
-                    @media (min-width: 62em) {
-                        font-size: 1.1em;
-                        padding: 0 0 0 81px;
-                    }
-                    &:last-child {
-                        margin: {
-                        bottom: 0;
-                        }
-                    }
-                    &:first-of-type:after {
+                    &:after {
                         content: '';
-                        width: 14px;
-                        height: 14px;
-                        background: #FFFFFF;
-                        border: 2px solid #C5C5C5;
-                        @include border-radius(50%);
+                        width: 2px;
                         position: absolute;
-                        left: 54px;
-                        top: 3px;
-                        z-index: 2;
+                        top: .5rem;
+                        bottom: 0rem;
+                        left: 60px;
+                        z-index: 1;
+                        background: #C5C5C5;
                     }
-                    li {
-                        margin-left: .5rem;
-                        &:before {
-                        margin-left: -.5rem;
-                        padding-right: .3rem;
+                    &:last-child:after {
+                        width: 0px;
+                    }
+        
+                    div {
+                        position: relative;
+                        font-family: 'Bitter';
+                        padding-right: 2rem;
+
+                        h4 {
+                            margin: 0;
+                            padding: 0 0 0 89px;
+                            @media (min-width: 62em) {
+                                font-size: 2em;
+                                font-weight: 400;
+                            }
                         }
-                        &:not(:first-child) {
-                        margin-top: .5rem;
+
+                        ul {
+                            list-style-type: none;
+                            margin: 0.35rem 0 1.2rem;
+                            max-width: 32rem;
+                            font-size: 0.9em;
+                            padding: 0 0 0 81px;
+                            @media (min-width: 62em) {
+                                font-size: 1.1em;
+                            }
+                            &:first-of-type:after {
+                                content: '';
+                                width: 14px;
+                                height: 14px;
+                                background: #FFFFFF;
+                                border: 2px solid #C5C5C5;
+                                @include border-radius(50%);
+                                position: absolute;
+                                left: 54px;
+                                top: 3px;
+                                z-index: 2;
+                            }
+                            li {
+                                margin-left: .5rem;
+                                &:before {
+                                    margin-left: -.5rem;
+                                    padding-right: .3rem;
+                                }
+                                &:not(:first-child) {
+                                    margin-top: .5rem;
+                                }
+                            }
                         }
                     }
-                    }
-                }
                 }
             }
     
