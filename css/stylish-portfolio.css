@@ -89,31 +89,73 @@ h6 {
   font-size: 5px;
 }
 
+.navbar {
+  text-align: center;
+}
+
+.navbar .navbar-trans {
+  background: transparent;
+}
+
+.navbar .social-link {
+  display: block;
+  height: 4rem;
+  width: 4rem;
+  line-height: 4.3rem;
+  font-size: 1.5rem;
+  background-color: rgba(52, 58, 64, 0.5);
+  transition: background-color 0.15s ease-in-out;
+  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+.navbar .social-link:hover {
+  background-color: #155d74;
+  text-decoration: none;
+}
+
 .masthead {
   min-height: 30rem;
   position: relative;
   display: table;
   width: 100%;
-  padding-top: 8rem;
-  padding-bottom: 8rem;
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), url("../img/bg-masthead.jpg");
+  padding: 0rem;
+  background: #242424;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
 }
 
-.masthead h1 {
+.masthead .overlay {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  display: table;
+}
+
+.masthead .overlay #intro-content {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.masthead .overlay #intro-content h1 {
   font-family: 'Noa';
+  font-weight: bold;
   font-size: 4rem;
   margin: 0;
   padding: 0;
 }
 
 @media (min-width: 992px) {
-  .masthead h1 {
+  .masthead .overlay #intro-content h1 {
     font-size: 5.5rem;
   }
+}
+
+.masthead .overlay #intro-content h3 {
+  font-family: 'Bitter';
 }
 
 @-webkit-keyframes scroll {
@@ -130,8 +172,8 @@ h6 {
 }
 
 .masthead .image-grid {
-  height: 70vh;
   overflow-y: hidden;
+  padding: 0;
 }
 
 .masthead .image-grid .row {
@@ -139,6 +181,13 @@ h6 {
   transform: translate3d(0, 0, 0);
   -webkit-animation: scroll 60s linear 0s infinite;
   animation: scroll 60s linear 0s infinite;
+}
+
+@media (min-width: 992px) {
+  .masthead .image-grid .row {
+    -webkit-animation: scroll 100s linear 0s infinite;
+    animation: scroll 100s linear 0s infinite;
+  }
 }
 
 .masthead .image-grid .row img {
@@ -232,15 +281,12 @@ h6 {
   background: #343a40;
 }
 
-.service-icon {
-  background-color: #fff;
-  color: #1D809F;
-  height: 7rem;
-  width: 7rem;
-  display: block;
-  line-height: 7.5rem;
-  font-size: 2.25rem;
-  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
+#brands h3 {
+  font-family: 'Noa';
+}
+
+#brands img {
+  width: 150px;
 }
 
 .callout {
@@ -337,20 +383,10 @@ footer.footer {
   padding-bottom: 5rem;
 }
 
-footer.footer .social-link {
-  display: block;
-  height: 4rem;
-  width: 4rem;
-  line-height: 4.3rem;
-  font-size: 1.5rem;
-  background-color: #1D809F;
-  transition: background-color 0.15s ease-in-out;
-  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
-}
-
-footer.footer .social-link:hover {
-  background-color: #155d74;
-  text-decoration: none;
+footer.footer .list-inline {
+  position: absolute;
+  top: 50px;
+  right: 100px;
 }
 
 a {
