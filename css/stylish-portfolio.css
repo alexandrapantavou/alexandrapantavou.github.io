@@ -109,7 +109,7 @@ h6 {
 }
 
 .navbar .social-link:hover {
-  background-color: #155d74;
+  background-color: #0b0b0b;
   text-decoration: none;
 }
 
@@ -155,7 +155,7 @@ h6 {
 }
 
 .masthead .overlay #intro-content h3 {
-  font-family: 'Bitter';
+  font-family: 'Noa';
 }
 
 @-webkit-keyframes scroll {
@@ -197,14 +197,14 @@ h6 {
 /* Side Menu */
 #sidebar-wrapper {
   position: fixed;
-  z-index: 2;
+  z-index: 2000;
   right: 0;
   width: 250px;
   height: 100%;
   transition: all 0.4s ease 0s;
   -webkit-transform: translateX(250px);
   transform: translateX(250px);
-  background: #1D809F;
+  background: #242424;
   border-left: 1px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -270,7 +270,7 @@ h6 {
   color: #fff;
   background: rgba(52, 58, 64, 0.5);
   line-height: 50px;
-  z-index: 999;
+  z-index: 3000;
 }
 
 .menu-toggle:focus, .menu-toggle:hover {
@@ -366,7 +366,7 @@ h6 {
     background-color: rgba(44, 30, 79, 0.9);
   }
   .portfolio-item:hover#klm-project .caption {
-    background-color: rgba(0, 110, 39, 0.9);
+    background-color: rgba(0, 163, 227, 0.9);
   }
   .portfolio-item:hover img {
     -webkit-clip-path: inset(2rem);
@@ -389,23 +389,27 @@ footer.footer .list-inline {
   right: 100px;
 }
 
+footer.footer img {
+  width: 150px;
+}
+
 a {
-  color: #1D809F;
+  color: #242424;
 }
 
 a:hover, a:focus, a:active {
-  color: #155d74;
+  color: #0b0b0b;
 }
 
 .btn-primary {
-  background-color: #1D809F !important;
-  border-color: #1D809F !important;
+  background-color: #242424 !important;
+  border-color: #242424 !important;
   color: #fff !important;
 }
 
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
-  background-color: #155d74 !important;
-  border-color: #155d74 !important;
+  background-color: #0b0b0b !important;
+  border-color: #0b0b0b !important;
 }
 
 .btn-secondary {
@@ -429,11 +433,11 @@ a:hover, a:focus, a:active {
 }
 
 .bg-primary {
-  background-color: #1D809F !important;
+  background-color: #242424 !important;
 }
 
 .text-primary {
-  color: #1D809F !important;
+  color: #242424 !important;
 }
 
 .text-secondary {
