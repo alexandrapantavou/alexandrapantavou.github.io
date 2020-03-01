@@ -94,13 +94,13 @@ h6 {
   position: relative;
   display: table;
   width: 100%;
-  height: auto;
   padding-top: 8rem;
   padding-bottom: 8rem;
   background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), url("../img/bg-masthead.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+  height: 100vh;
 }
 
 .masthead h1 {
@@ -111,87 +111,38 @@ h6 {
 }
 
 @media (min-width: 992px) {
-  .masthead {
-    height: 100vh;
-  }
   .masthead h1 {
     font-size: 5.5rem;
   }
 }
 
-@-webkit-keyframes flip {
-  0% {
-    -webkit-transform: rotateX(0deg);
-  }
-  10% {
-    -webkit-transform: rotateX(180deg);
-  }
-  50% {
-    -webkit-transform: rotateX(180deg);
-  }
-  60% {
-    -webkit-transform: rotateX(360deg);
-  }
+@-webkit-keyframes scroll {
   100% {
-    -webkit-transform: rotateX(360deg);
+    -webkit-transform: translateY(-66.6666%);
   }
 }
 
-@keyframes flip {
-  0% {
-    -webkit-transform: rotateX(0deg);
-  }
-  10% {
-    -webkit-transform: rotateX(180deg);
-  }
-  50% {
-    -webkit-transform: rotateX(180deg);
-  }
-  60% {
-    -webkit-transform: rotateX(360deg);
-  }
+@keyframes scroll {
   100% {
-    -webkit-transform: rotateX(360deg);
+    -webkit-transform: translateY(-66.6666%);
+    transform: translateY(-66.6666%);
   }
 }
 
-.masthead .image-grid .col {
-  -webkit-perspective: 1000px;
-  perspective: 1000px;
+.masthead .image-grid {
+  height: 70vh;
+  overflow-y: hidden;
 }
 
-.masthead .image-grid .col .grid-image-box {
-  -webkit-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-  position: relative;
+.masthead .image-grid .row {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -webkit-animation: scroll 60s linear 0s infinite;
+  animation: scroll 60s linear 0s infinite;
 }
 
-.masthead .image-grid .col .grid-image-box:not(.delay) {
-  -webkit-animation: flip 16s linear 0s infinite;
-  animation: flip 16s linear 0s infinite;
-}
-
-.masthead .image-grid .col .grid-image-box.delay {
-  -webkit-animation: flip 16s linear 4s infinite;
-  animation: flip 16s linear 4s infinite;
-}
-
-.masthead .image-grid .col .grid-image-box div {
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
-
-.masthead .image-grid .col .grid-image-box div:not(:first-child) {
-  position: absolute;
-  top: 0;
-  left: 0;
-  -webkit-transform: rotateX(180deg);
-  transform: rotateX(180deg);
-}
-
-.masthead .image-grid .col .grid-image-box div img {
+.masthead .image-grid .row img {
   width: 100%;
-  height: 100%;
 }
 
 /* Side Menu */
