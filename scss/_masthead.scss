@@ -10,6 +10,7 @@
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+
   h1 {
     font-family: 'Noa';
     font-size: 4rem;
@@ -20,6 +21,58 @@
     height: 100vh;
     h1 {
       font-size: 5.5rem;
+    }
+  }
+
+  @-webkit-keyframes flip {
+    0% {
+      -webkit-transform: rotateX(0deg);
+    }
+    100% {
+      -webkit-transform: rotateX(360deg);
+    }
+  }
+  @keyframes flip {
+    0% {
+      -webkit-transform: rotateX(0deg);
+    }
+    100% {
+      -webkit-transform: rotateX(360deg);
+    }
+  }
+
+  .image-grid {
+
+    .col {        
+      perspective: 1000px;
+      transform-style: preserve-3d;
+
+      .grid-image-box {
+        position: relative;
+        -webkit-animation: flip 16s linear 0s infinite;
+        animation: flip 16s linear 0s infinite;
+
+        img {
+          width: 100%;
+          height: 100%;
+          -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+        }
+  
+        .grid-image-2, .grid-image-3 {
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+  
+        .grid-image-2 {
+          transform: rotateX(180deg)
+        }
+  
+        .grid-image-3 {
+          display: none;
+        }
+      }
     }
   }
 }

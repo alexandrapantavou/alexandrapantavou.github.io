@@ -15,16 +15,16 @@ border-radius: $radius;
 }
 
 #bookingModal {
-    @include project-color(#0F3478)
+    @include project-color($bookingColor)
 }
 #starbucksModal {
-    @include project-color(#00653D)
+    @include project-color($starbucksColor)
 }
 #monclerModal {
-    @include project-color(#2C1E4F)
+    @include project-color($monclerColor)
 }
 #klmModal {
-    @include project-color(#006E27)
+    @include project-color($klmColor)
 }
 
 .modal-content {
@@ -38,13 +38,14 @@ border-radius: $radius;
             flex: auto;
             flex-direction: column;
             max-height: 100%;
-            text-align: center;
     
             h1 {
                 font-family: 'Noa';
                 font-size: 2.5em;
                 color: gray;
                 margin: 16px;
+                text-align: left;
+                padding-left: 2rem;
 
                 @media (min-width: 62em) {
                     font-size: 3em;
@@ -136,10 +137,11 @@ border-radius: $radius;
             }
 
             .logo {
+                text-align: center;
 
                 img {
-                    height: 50px;
-                    max-width: 50%;
+                    max-height: 50px;
+                    max-width: 40%;
                     margin: 10px;
                 }
             }

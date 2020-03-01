@@ -119,6 +119,59 @@ h6 {
   }
 }
 
+@-webkit-keyframes flip {
+  0% {
+    -webkit-transform: rotateX(0deg);
+  }
+  100% {
+    -webkit-transform: rotateX(360deg);
+  }
+}
+
+@keyframes flip {
+  0% {
+    -webkit-transform: rotateX(0deg);
+  }
+  100% {
+    -webkit-transform: rotateX(360deg);
+  }
+}
+
+.masthead .image-grid .col {
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.masthead .image-grid .col .grid-image-box {
+  position: relative;
+  -webkit-animation: flip 16s linear 0s infinite;
+  animation: flip 16s linear 0s infinite;
+}
+
+.masthead .image-grid .col .grid-image-box img {
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.masthead .image-grid .col .grid-image-box .grid-image-2, .masthead .image-grid .col .grid-image-box .grid-image-3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.masthead .image-grid .col .grid-image-box .grid-image-2 {
+  -webkit-transform: rotateX(180deg);
+  transform: rotateX(180deg);
+}
+
+.masthead .image-grid .col .grid-image-box .grid-image-3 {
+  display: none;
+}
+
 /* Side Menu */
 #sidebar-wrapper {
   position: fixed;
@@ -284,12 +337,23 @@ h6 {
     transition: 0.25s ease-out;
     clip-path: inset(-1px);
   }
+  .portfolio-item:hover#booking-project .caption {
+    background-color: rgba(15, 52, 120, 0.9);
+  }
+  .portfolio-item:hover#starbucks-project .caption {
+    background-color: rgba(0, 101, 61, 0.9);
+  }
+  .portfolio-item:hover#moncler-project .caption {
+    background-color: rgba(44, 30, 79, 0.9);
+  }
+  .portfolio-item:hover#klm-project .caption {
+    background-color: rgba(0, 110, 39, 0.9);
+  }
   .portfolio-item:hover img {
     -webkit-clip-path: inset(2rem);
     clip-path: inset(2rem);
   }
   .portfolio-item:hover .caption {
-    background-color: rgba(29, 128, 159, 0.9);
     -webkit-clip-path: inset(2rem);
     clip-path: inset(2rem);
   }
@@ -451,7 +515,6 @@ a:hover, a:focus, a:active {
   flex: auto;
   flex-direction: column;
   max-height: 100%;
-  text-align: center;
 }
 
 .modal-content .modal-body .modal-container h1 {
@@ -459,6 +522,8 @@ a:hover, a:focus, a:active {
   font-size: 2.5em;
   color: gray;
   margin: 16px;
+  text-align: left;
+  padding-left: 2rem;
 }
 
 @media (min-width: 62em) {
@@ -560,8 +625,12 @@ a:hover, a:focus, a:active {
   margin-top: -40px;
 }
 
+.modal-content .modal-body .modal-container .logo {
+  text-align: center;
+}
+
 .modal-content .modal-body .modal-container .logo img {
-  height: 50px;
-  max-width: 50%;
+  max-height: 50px;
+  max-width: 40%;
   margin: 10px;
 }

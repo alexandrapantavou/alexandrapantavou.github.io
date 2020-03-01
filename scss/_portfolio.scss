@@ -4,6 +4,9 @@
   overflow: hidden;
   max-width: 530px;
   margin: auto auto 1rem;
+
+
+
   .caption {
     display: flex;
     height: 100%;
@@ -44,12 +47,25 @@
       clip-path: inset(-1px);
     }
     &:hover {
+
+      &#booking-project .caption {
+        background-color: fade-out($bookingColor, 0.1);
+      }
+      &#starbucks-project .caption {
+        background-color: fade-out($starbucksColor, 0.1);
+      }
+      &#moncler-project .caption {
+        background-color: fade-out($monclerColor, 0.1);
+      }
+      &#klm-project .caption {
+        background-color: fade-out($klmColor, 0.1);
+      }
+      
       img {
         -webkit-clip-path: inset(2rem);
         clip-path: inset(2rem);
       }
       .caption {
-        background-color: fade-out($primary, 0.1);
         -webkit-clip-path: inset(2rem);
         clip-path: inset(2rem);
       }
