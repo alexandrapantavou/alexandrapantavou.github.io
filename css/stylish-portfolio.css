@@ -172,8 +172,8 @@ h6 {
 }
 
 .masthead .image-grid .col .grid-image-box.delay {
-  -webkit-animation: flip 16s linear 8s infinite;
-  animation: flip 16s linear 8s infinite;
+  -webkit-animation: flip 16s linear 4s infinite;
+  animation: flip 16s linear 4s infinite;
 }
 
 .masthead .image-grid .col .grid-image-box div {
