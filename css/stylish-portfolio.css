@@ -113,6 +113,10 @@ h6 {
   text-decoration: none;
 }
 
+.grecaptcha-badge {
+  visibility: hidden;
+}
+
 .masthead {
   min-height: 30rem;
   position: relative;
