@@ -657,5 +657,5 @@ a:hover, a:focus, a:active {
 }
 
 #contact {
-  height: 100vh;
+  min-height: 100vh;
 }
