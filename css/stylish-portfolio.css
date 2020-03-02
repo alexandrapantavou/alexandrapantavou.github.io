@@ -655,3 +655,7 @@ a:hover, a:focus, a:active {
   max-width: 40%;
   margin: 10px;
 }
+
+#contact {
+  height: 100vh;
+}
