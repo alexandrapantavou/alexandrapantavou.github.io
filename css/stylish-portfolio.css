@@ -19,12 +19,12 @@ body {
 }
 
 .content-section {
-  padding-top: 7.5rem;
-  padding-bottom: 7.5rem;
+  padding-top: 3rem;
+  padding-bottom: 2.5rem;
 }
 
 .content-section-heading h2 {
-  font-size: 3rem;
+  font-size: 2.5rem;
 }
 
 .content-section-heading h3 {
@@ -138,10 +138,12 @@ h6 {
 .masthead .overlay #intro-content {
   display: table-cell;
   vertical-align: middle;
+  font-family: 'Noa';
+  color: white;
+  width: auto;
 }
 
 .masthead .overlay #intro-content h1 {
-  font-family: 'Noa';
   font-weight: bold;
   font-size: 4rem;
   margin: 0;
@@ -155,7 +157,16 @@ h6 {
 }
 
 .masthead .overlay #intro-content h3 {
-  font-family: 'Noa';
+  background-color: #242424;
+  font-size: 1.2rem;
+  line-height: 2rem;
+}
+
+@media (min-width: 992px) {
+  .masthead .overlay #intro-content h3 {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+  }
 }
 
 @-webkit-keyframes scroll {
@@ -281,14 +292,6 @@ h6 {
   background: #343a40;
 }
 
-#brands h3 {
-  font-family: 'Noa';
-}
-
-#brands img {
-  width: 150px;
-}
-
 .callout {
   padding: 15rem 0;
   background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), url("../img/bg-callout.jpg");
@@ -379,8 +382,8 @@ h6 {
 }
 
 footer.footer {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
+  padding-top: 4rem;
+  padding-bottom: 0.5rem;
 }
 
 footer.footer .list-inline {
@@ -577,6 +580,7 @@ a:hover, a:focus, a:active {
 }
 
 .modal-content .modal-body .modal-container #timeline div div h4 {
+  font-family: 'Noa';
   margin: 0;
   padding: 0 0 0 79px;
 }

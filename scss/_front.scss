@@ -21,9 +21,11 @@
     #intro-content {
       display: table-cell;
       vertical-align: middle;
+      font-family: 'Noa';
+      color: white;
+      width: auto;
 
       h1 {
-        font-family: 'Noa';
         font-weight: bold;
         font-size: 4rem;
         margin: 0;
@@ -36,7 +38,13 @@
       }
   
       h3 {
-        font-family: 'Noa';
+        background-color: $primary;
+        font-size: 1.2rem;
+        line-height: 2rem;
+        @media (min-width: 992px) {
+          font-size: 1.5rem;
+          line-height: 2.5rem;
+        }
       }
     }
   }
