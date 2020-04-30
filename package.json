@@ -28,7 +28,7 @@
         "bootstrap": "^4.4.1",
         "del": "^5.1.0",
         "gulp-plumber": "^1.2.1",
-        "jquery": "^3.4.1",
+        "jquery": "^3.5.0",
         "jquery.easing": "^1.4.1",
         "merge-stream": "^2.0.0",
         "popper.js": "^1.16.0",
