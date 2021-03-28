@@ -37,6 +37,7 @@ $(function () {
       $.ajax({
         url: "https://mv-api-management.azure-api.net/website/ContactFormEmail",
         type: "POST",
+        contentType: "application/json; charset=utf-8",
         data: JSON.stringify({
             appid: appid,
             name: name,
