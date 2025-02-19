@@ -1,0 +1,45 @@
+name: deploy to github branch
+on: push
+permissions:
+  contents: write
+jobs: 
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          npm install
+          npm run build
+      - uses: actions/upload-artifact@v4
+        with:
+          name: build-output
+          path: |
+            js/*min*
+            css/*min*
+            vendor/**
+            img/**
+            deployment/**
+            favicon.ico
+            *.html
+            CNAME
+            LICENSE
+            .well-known/**
+            _config.yml
+  production:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: 'github'
+      - uses: actions/download-artifact@v4
+        with:
+          name: build-output
+          path: ./     
+      - name: Commit build        
+        run: |
+          git config user.name "Pipeline"
+          git config user.email "dummy@domain.com"
+          git add .
+          git commit --allow-empty -m "Push build to github branch"
+          git push origin HEAD:github
